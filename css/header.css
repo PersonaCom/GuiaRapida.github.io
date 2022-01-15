@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  background: #f2f2f2;
+  font-size: 1.1rem;
+}
+
+
+/*  --  Header  --  */
+
+.menu {
+  background-color: #333333;
+  color: #f2f2f2;
+  height: 70px;
+  z-index: 10;
+  position: sticky;
+  top: 0;
+}
+
+.menu_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.menu_links {
+  height: 100%;
+  transition: transform .5s;
+  display: flex;
+}
+
+.menu_item {
+  list-style: none;
+  position: relative;
+  height: 100%;
+  --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+  --transform: rotate(-90deg);
+}
+
+.menu_item:hover {
+  --clip: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  --transform: rotate(0);
+}
+
+.menu_link {
+  color: #f2f2f2;
+  text-decoration: none;
+  padding: 0 10px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.menu_link:hover {
+  background-color: #B8A22A;
+  transition: .3s;
+}
+
+
+.menu_icon {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu_img{
+  display: block;
+  width: 35px;
+}
+
+@media (max-width: 800px) {
+  .menu_icon {
+    display: flex;
+  }
+
+  .menu_links {
+    position: fixed;
+    max-width: 400px;
+    width: 100%;
+    top: 50px;
+    bottom: 0;
+    right: 0;
+    background-color: #333333;
+    overflow-y: auto;
+    display: grid;
+    grid-auto-rows: max-content;
+    transform: translate(100%);
+  }
+
+  
+  .menu_links--show {
+    transform: unset;
+    width: 100%;
+  }
+  
+
+  .menu_link {
+    padding: 25px;
+    padding-left: 30px;
+    height: auto;
+  }
+}
+
+/*  -- Descripción del juego --  */
+
+.about {
+  width: 90%;
+  padding: auto;
+  margin: auto;
+
+}
+
+.about h1 {
+  color: #333333;
+  text-decoration: underline;
+}
+
+.about .first_line {
+  display: flex;
+  z-index: 1;
+}
+
+.about .first_line .descripcion {
+  width: 50%;
+}
+
+.about .bold {
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 0;
+}
+
+.about .first_line .portada {
+  width: 40%;
+}
+
+.about p {
+  text-align: justify;
+  display: flex;
+}
+
+.about img {
+  display: flex;
+  padding-left: 40px;
+}
+
+.detalles {
+  padding-top: 30px;
+  margin: auto;
+}
+
+.detalles .n_detalles {
+  font-weight: bold;
+  color: #cc0000;
+}
+
+
+.detalles td {
+  width: 60%;
+}
+
+/*------  texto párrafo  ------*/
+.texto .capitulo {
+  width: 90%;
+  margin: auto;
+  padding-top: 60px;
+  text-align: justify;
+}
+
+.t_capitulo {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #f2f2f2;
+  background-color: #B8A22A;
+  padding-left: 10px;
+}
+
+.anotacion {
+  background-color: #CCC38F;
+}
+
+
+.bold {
+  font-weight: bold;
+  color: #333333;
+}
+
+.boss {
+  font-weight: bold;
+  color: #cc0000;
+  display: inline;
+}
+
+.mapas {
+  width: 90%;
+}
+
+.mapas h1 {
+  color: #333333;
+  text-align: center;
+  padding-top: 60px;
+  text-decoration: underline;
+}
+
+.mapas img {
+  max-width: 75%;
+  display: flex;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+
+
+@media (max-width: 1100px) {
+  .about .first_line {
+    display: inherit;
+  }
+
+  .about .first_line .descripcion {
+    width: 90%;
+  }
+
+  .about img {
+    padding-left: 40%;
+  }
+
+
+  .texto .capitulo {
+    margin: auto;
+    padding-top: 60px;
+    text-align: justify;
+  }
+}
+
+/*------------- FOOTER --------------*/
+.footer {
+  width: 100%;
+  height: 140px;
+  background-color: #333333;
+}
+
+.footer h1 {
+  color: #f2f2f2;
+  text-align: center;
+}
